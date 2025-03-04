@@ -3,77 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurants</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <nav>
-        <h1>DELIVERY WALA</h1>
-        <div class="dropdown">
-            <select id="cityDropdown" onchange="filterRestaurantsByCity()">
-                <option value="all">All Cities</option>
-                <option value="Karachi">Karachi</option>
-                <option value="Lahore">Lahore</option>
-                <option value="Islamabad">Islamabad</option>
-            </select>
-        </div>
-    </nav>
-    <div class="restaurant-container" id="restaurantContainer">
-        <div class="restaurant-card" data-city="Karachi">
-            <img src="images/images.jpeg" alt="Restaurant Image">
-            <h3>KABABJEES HOUSE</h3>
-            <p>Location: Karachi</p>
-            <p>Cuisine: Everything</p>
-        </div>
-        <div class="restaurant-card" data-city="Karachi">
-            <img src="images/images (1).jpeg" alt="Restaurant Image">
-            <h3>ANGEETHI</h3>
-            <p>Location: Karachi</p>
-            <p>Cuisine: BBQ</p>
-        </div>
-        <div class="restaurant-card" data-city="Karachi">
-            <img src="images/KFC_logo.svg.png" alt="Restaurant Image">
-            <h3>KFC</h3>
-            <p>Location: Karachi</p>
-            <p>Cuisine: FastFood</p>
-        </div>
-        <div class="restaurant-card" data-city="Karachi">
-            <img src="images/images (2).jpeg" alt="Restaurant Image">
-            <h3>KAYBEES</h3>
-            <p>Location: KARACHI</p>
-            <p>Cuisine: FastFood</p>
-        </div>
-        <div class="restaurant-card" data-city="Karachi">
-            <img src="images/images.png" alt="Restaurant Image">
-            <h3>HAVELI KABAB AND GRILL</h3>
-            <p>Location: Karachi</p>
-            <p>Cuisine: BBQ</p>
-        </div>
-        <div class="restaurant-card" data-city="Lahore">
-            <img src="images/images (3).jpeg" alt="Restaurant Image">
-            <h3>LALQILA</h3>
-            <p>Location: Lahore</p>
-            <p>Cuisine: BBQ</p>
-        </div>
-        <div class="restaurant-card" data-city="Islamabad">
-            <img src="images/images (4).jpeg" alt="Restaurant Image">
-            <h3>MCDONALD</h3>
-            <p>Location: Islamabad</p>
-            <p>Cuisine: FastFood</p>
-        </div>
-        <div class="restaurant-card" data-city="Islamabad">
-            <img src="images/images (5).jpeg" alt="Restaurant Image">
-            <h3>Kolachi Restaurant</h3>
-            <p>Location: Islamabad</p>
-            <p>Cuisine: BBQ</p>
-        </div>
-        <div class="restaurant-card" data-city="\\Karachi">
-            <img src="images/images (6).jpeg" alt="Restaurant Image">
-            <h3>SUBWAY</h3>
-            <p>Location: Karachi</p>
-            <p>Cuisine: FastFood</p>
-        </div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p id="error-message"></p>
     </div>
-    <script src="script.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>

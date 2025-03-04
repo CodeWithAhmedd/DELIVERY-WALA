@@ -7,7 +7,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     let storedPassword = 'password';
 
     if (username === storedUsername && password === storedPassword) {
-        window.location.href = 'index.html';
+        window.location.href = 'restraunt.html';
     } else {
         document.getElementById('error-message').textContent = 'Invalid username or password';
     }
