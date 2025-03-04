@@ -3,8 +3,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     let username = document.getElementById('username').value;
     let password = document.getElementById('password').value;
-    let storedUsername = 'user';
-    let storedPassword = 'password';
+    let storedUsername = 'admin';
+    let storedPassword = 'smit123';
 
     if (username === storedUsername && password === storedPassword) {
         window.location.href = 'restraunt.html';
