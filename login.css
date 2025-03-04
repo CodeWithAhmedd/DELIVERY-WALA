@@ -59,7 +59,6 @@ button:hover {
     margin-top: 10px;
 }
 
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .login-container {
         width: 90%;
