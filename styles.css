@@ -19,7 +19,7 @@ nav {
 
 nav h1 {
     color: #2844ff;
-    margin: 0;
+    margin: 10px;
     flex: 1;
 }
 
@@ -29,8 +29,8 @@ nav h1 {
 }
 
 .search-bar input {
-    width: 100%;
-    padding: 5px;
+    width: 90%;
+    padding: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
 }
@@ -83,7 +83,7 @@ nav h1 {
     color: #2844ff;
     border: 2px solid #2844ff;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 8px 8px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease, color 0.3s ease;
