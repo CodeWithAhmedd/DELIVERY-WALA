@@ -13,10 +13,17 @@
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Search restaurants...">
         </div>
-        <div class="admin-panel">
-            <a href="admin.html"><img src="images/MySelf.jpg" alt="" class="p-pic"></a>
-        </div>
         <button class="add-restaurant-btn" onclick="addRestaurant()">Add Restaurant</button>
+        <div class="admin-panel">
+            <div class="dropdown">
+                <img src="images/MySelf.jpg" alt="" class="p-pic" onclick="toggleDropdown()">
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="restraunt.html">Home</a>
+                    <a href="contacts.html">Contacts</a>
+                    <a href="index.html">Logout</a>
+                </div>
+            </div>
+        </div>
     </nav>
     <div class="restaurant-container" id="restaurantContainer">
     </div>

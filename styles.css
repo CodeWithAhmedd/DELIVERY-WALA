@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #6d77ff 0%, #cdd0ff 100%);
+    background: linear-gradient(135deg, #2844ff 0%, #9eabff 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,29 +9,30 @@ body {
 
 nav {
     width: 100%;
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 nav h1 {
-    color: #6d77ff;
-    margin: 10px;
+    color: #2844ff;
+    margin: 0;
+    flex: 1;
 }
 
 .search-bar {
-    flex-grow: 1;
+    flex-grow: 2;
     margin: 0 20px;
 }
 
 .search-bar input {
-    width: 500px;
-    padding: 10px;
+    width: 100%;
+    padding: 5px;
     border-radius: 5px;
     border: 1px solid #ddd;
-    margin-left: 150px;
 }
 
 .admin-panel {
@@ -39,25 +40,134 @@ nav h1 {
     align-items: center;
 }
 
-.admin-panel img {
+.admin-panel .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.admin-panel .p-pic {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    margin-right: 10px;
+    cursor: pointer;
+}
+
+.admin-panel .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.admin-panel .dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.admin-panel .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.admin-panel .dropdown-content.show {
+    display: block;
 }
 
 .add-restaurant-btn {
     background-color: #fff;
-    color: #6d77ff;
-    border: 2px solid #6d77ff;
+    color: #2844ff;
+    border: 2px solid #2844ff;
     border-radius: 5px;
-    padding: 12px 10px;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-right: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .add-restaurant-btn:hover {
-    background-color: #6d77ff;
+    background-color: #ff6f61;
     color: #fff;
+}
+
+.restaurant-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.restaurant-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.restaurant-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.restaurant-card h3 {
+    margin: 15px 0 10px;
+    color: #ff6f61;
+}
+
+.restaurant-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .search-bar {
+        flex-grow: 1;
+        margin: 10px 0;
+    }
+
+    .add-restaurant-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .restaurant-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .add-restaurant-btn {
+        width: 100%;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .restaurant-card {
+        width: 100%;
+        margin: 10px 0;
+    }
 }

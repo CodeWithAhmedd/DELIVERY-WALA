@@ -61,3 +61,38 @@ function loadRestaurants() {
         addRestaurantCard(restaurant);
     });
 }
+
+function toggleDropdown() {
+    document.getElementById('dropdownContent').classList.toggle('show');
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.p-pic')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+document.getElementById('dropdownContent').addEventListener('click', function(event) {
+    if (event.target.matches('a[href="index.html"]')) {
+        event.preventDefault();
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You will be logged out!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, logout!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = 'index.html';
+            }
+        });
+    }
+});
