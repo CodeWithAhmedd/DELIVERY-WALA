@@ -7,7 +7,16 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     let storedPassword = 'smit123';
 
     if (username === storedUsername && password === storedPassword) {
-        window.location.href = 'restraunt.html';
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Login Successful",
+            showConfirmButton: false,
+            timer: 1500
+        });
+        setTimeout(() => {
+            window.location.href = 'restraunt.html';
+        }, 1500); 
     } else {
         document.getElementById('error-message').textContent = 'Invalid username or password';
     }
